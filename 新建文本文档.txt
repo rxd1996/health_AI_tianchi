@@ -1,0 +1,8 @@
+
+def get_num_status(x):
+    try:
+        a=x.count('甲状腺大小形态正常')+x.count('甲状腺形态正常')+x.count('甲状腺大小正常')+x.count('甲状腺彩超（双侧）未发现明显异常')+x.count('甲状腺彩超未发现明显异常')
+        return a
+    except:
+        return -1
+data_history['_1']=data_history['0101'].map(lambda x:get_num_status(x))
